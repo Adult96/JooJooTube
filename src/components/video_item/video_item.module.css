@@ -49,6 +49,7 @@
   box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
   cursor: pointer;
   transition: transform 250ms ease-in;
+  border-radius: 0.5em;
 }
 
 .video:hover {
@@ -58,11 +59,12 @@
 .thumbnail {
   width: 40%;
   height: 100%;
+  border-radius: 0.5em;
 }
 
 .metadata {
   width: 60%;
-  margin-left: 0.2em;
+  margin-left: 0.4em;
 }
 
 .title,
