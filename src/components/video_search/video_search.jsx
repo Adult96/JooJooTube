@@ -18,19 +18,21 @@ const VideoSearch = ({ onSearch }) => {
         <img className={styles.logo} src='images/logo.png' alt='logo' />
         <p className={styles.name}>JooJooTube</p>
       </div>
-      <input
-        ref={searchRef}
-        className={styles.search}
-        type='text'
-        placeholder='Search...'
-      />
-      <button className={styles.search_btn}>
-        <img
-          className={styles.search_img}
-          src='images/search.png'
-          alt='search'
+      <div className={styles.search_container}>
+        <input
+          ref={searchRef}
+          className={styles.search}
+          type='text'
+          placeholder='Search...'
         />
-      </button>
+        <button className={styles.search_btn}>
+          <img
+            className={styles.search_img}
+            src='images/search.png'
+            alt='search'
+          />
+        </button>
+      </div>
     </form>
   );
 };
