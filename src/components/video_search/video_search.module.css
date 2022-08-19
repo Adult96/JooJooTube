@@ -9,7 +9,7 @@
   z-index: 1000;
 }
 
-.logo_container {
+.container {
   position: absolute;
   left: 0;
   display: flex;
@@ -17,6 +17,16 @@
   align-items: center;
   left: 0;
   margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.search_bar {
+  display: none;
 }
 
 .logo {
@@ -64,16 +74,28 @@
 
 @media screen and (max-width: 860px) {
   .header {
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem 0;
   }
 
-  .logo_container {
+  .container {
     position: static;
     margin-right: 0.5rem;
   }
 
+  .logo_container {
+  }
+
+  .search_bar {
+    position: absolute;
+    right: 0;
+    margin-right: 0.5rem;
+    display: none;
+  }
+
   .search_container {
     margin-right: 0.5rem;
-    width: 100%;
+    width: 80%;
   }
 }

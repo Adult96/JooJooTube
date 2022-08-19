@@ -1,9 +1,8 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useRef } from 'react';
 import styles from './video_search.module.css';
 
-const VideoSearch = ({ onSearch }) => {
+const VideoSearch = memo(({ onSearch, onLogoClick }) => {
   const searchRef = useRef();
 
   const handleSumit = (e) => {
@@ -12,13 +11,26 @@ const VideoSearch = ({ onSearch }) => {
     onSearch(searchItem);
   };
 
+  const handleLogoClick = () => {
+    onLogoClick();
+  };
+
   return (
-    <form className={styles.header} onSubmit={handleSumit}>
-      <div className={styles.logo_container}>
-        <img className={styles.logo} src='images/logo.png' alt='logo' />
-        <p className={styles.name}>JooJooTube</p>
+    <div className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.logo_container} onClick={handleLogoClick}>
+          <img className={styles.logo} src='images/logo.png' alt='logo' />
+          <p className={styles.name}>JooJooTube</p>
+        </div>
+        <button className={`${styles.search_btn} ${styles.search_bar}`}>
+          <img
+            className={styles.search_img}
+            src='images/search.png'
+            alt='search'
+          />
+        </button>
       </div>
-      <div className={styles.search_container}>
+      <form className={styles.search_container} onSubmit={handleSumit}>
         <input
           ref={searchRef}
           className={styles.search}
@@ -32,9 +44,9 @@ const VideoSearch = ({ onSearch }) => {
             alt='search'
           />
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
-};
+});
 
 export default VideoSearch;

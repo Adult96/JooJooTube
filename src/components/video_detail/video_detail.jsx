@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './video_detail.module.css';
-import VideoItem from '../video_item/video_item';
+
 const VideoDetail = ({ videos, videos: { snippet } }) => {
   console.log(videos);
   return (
@@ -8,6 +8,7 @@ const VideoDetail = ({ videos, videos: { snippet } }) => {
       <iframe
         className={styles.player}
         type='text/html'
+        title='joojootube video player'
         width='100%'
         height='500px'
         src={`https://www.youtube.com/embed/${videos.id}`}
