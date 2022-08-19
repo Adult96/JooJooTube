@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/JooJooTube/static/css/main.760c5806.css",
+    "main.css": "/JooJooTube/static/css/main.579e3ade.css",
     "main.js": "/JooJooTube/static/js/main.e78bc66c.js",
     "index.html": "/JooJooTube/index.html",
-    "main.760c5806.css.map": "/JooJooTube/static/css/main.760c5806.css.map",
+    "main.579e3ade.css.map": "/JooJooTube/static/css/main.579e3ade.css.map",
     "main.e78bc66c.js.map": "/JooJooTube/static/js/main.e78bc66c.js.map"
   },
   "entrypoints": [
-    "static/css/main.760c5806.css",
+    "static/css/main.579e3ade.css",
     "static/js/main.e78bc66c.js"
   ]
 }
